@@ -1,8 +1,10 @@
 public class HelloJava2 {
 
     public static void main(String[] args) {
-        System.out.println("hello java1");
-        System.out.println("hello java2");
-        System.out.println("hello java3");
+        String helloword = "\nhello java";
+
+        for (int i = 0; i < 3; i++) {
+            System.out.print(helloword + i) ;
+        }
     }
 }
