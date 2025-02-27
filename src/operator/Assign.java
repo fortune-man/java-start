@@ -8,7 +8,6 @@ public class Assign {
     a -= 2;
     a *= 4;
     a /= 3;
-    a %= 5;
     System.out.println(a);
   }
 
