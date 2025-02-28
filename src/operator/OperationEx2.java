@@ -10,7 +10,7 @@ public class OperationEx2 {
     double sum = val1 + val2 + val3;
     System.out.println("합= " + sum);
 
-    double average = sum / 2;
+    double average = sum / 3;
     System.out.println("평균= " + average);
   }
 
