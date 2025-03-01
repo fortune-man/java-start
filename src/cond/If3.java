@@ -25,7 +25,9 @@ public class If3 {
     else if (elementary) {
       System.out.println("초등학생");
     }
-    else if (middle) {
+
+
+    if (middle) {
       System.out.println("중학생");
     }
     else if (high) {
