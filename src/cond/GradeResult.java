@@ -20,7 +20,8 @@ public class GradeResult{
     switch(grade){
       case "A":
         System.out.println("탁월한 성과입니다!");
-        break;
+        break; // break문은 현재 실행 중인 코드를 끝내고 switch문을 빠져나가게 하는 역할을 한다
+      // break문이 만약 없으면 일치하는 case 이후의 모든 case 코드들이 순서대로 실행된다
       case "B":
         System.out.println("좋은 성과입니다!");
         break;
@@ -35,6 +36,9 @@ public class GradeResult{
         break;
       default:
         System.out.println("잘못된 학점입니다.");
+        // 조건식의 결과값이 모든 case의 값과 일치하지 않을 때 실행된다.
+        // default 구문은 선택이다.
+        // if, else-if, else 구조와 동일하다.
     }
 
 
