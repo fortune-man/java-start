@@ -9,9 +9,10 @@ public class MoreBigNumber {
   public static void main(String[] args) {
     int a = 10;
     int b = 20;
+    int bigNumber = a > b ? 10 : 20;
 
-    if (a > b ? 10 : 20) {
-      System.out.println(b);
+    if (bigNumber > 0) {
+      System.out.println(bigNumber);
     }
   }
 
