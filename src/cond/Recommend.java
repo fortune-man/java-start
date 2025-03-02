@@ -13,7 +13,8 @@ import java.util.Scanner;
 
 public class Recommend {
   public static void main(String[] args) {
-    double rating = 8.5;
+    Scanner scanner = new Scanner(System.in);
+    double rating = scanner.nextDouble();
 
     if (rating <= 7) {
       System.out.println("고질라");
