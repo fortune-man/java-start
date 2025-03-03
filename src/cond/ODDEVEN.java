@@ -23,21 +23,13 @@ public class ODDEVEN {
 
     if ( isEven == true ? printEven : printOdd) {
       if (printEven) {
-        isPrintEven(printEven);
+        System.out.println(even);
       }
       if (printOdd) {
-        isPrintOdd(printOdd);
+        System.out.println(odd);
       }
     }
-    System.out.println(odd);
-    scanner.close();
   }
 
-  private static void isPrintOdd(boolean printOdd) {
-    System.out.println(odd);
-  }
 
-  private static void isPrintEven (boolean printEven) {
-    System.out.println(even);
-  }
 }
