@@ -12,24 +12,12 @@ public class ODDEVEN {
   private static String even = "짝수";
   private static String odd = "홀수";
 
+  // 이른 최적화
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     int x = scanner.nextInt();
 
-    boolean printEven = true;
-    boolean printOdd = true;
-
-    boolean isEven = x % 2 == 0;
-
-    if ( isEven == true ? printEven : printOdd) {
-      if (printEven) {
-        System.out.println(even);
-      }
-      if (!printEven) {
-        System.out.println(odd);
-      }
-    }
+    String result = x % 2 == 0 ? even : odd;
+    System.out.println(result);
   }
-
-
 }
