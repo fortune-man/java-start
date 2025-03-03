@@ -14,10 +14,10 @@ public class ODDEVEN {
 
   // 이른 최적화
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    int x = scanner.nextInt();
+    Scanner scanner = new Scanner(System.in); // scanner에 정수 입력되면
+    int x = scanner.nextInt(); // 변수에 대입
 
-    String result = x % 2 == 0 ? even : odd;
-    System.out.println(result);
+    String result = x % 2 == 0 ? even : odd; // 변수가 2로 나누어떨어지는 조건이 참인 경우 변수 even, 아닌 경우 odd를 return
+    System.out.println(result); // return 된 문자열을 변수 result에 대입하여 출력!
   }
 }
