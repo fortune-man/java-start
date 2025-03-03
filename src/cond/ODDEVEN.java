@@ -25,7 +25,7 @@ public class ODDEVEN {
       if (printEven) {
         System.out.println(even);
       }
-      if (printOdd) {
+      if (!printEven) {
         System.out.println(odd);
       }
     }
