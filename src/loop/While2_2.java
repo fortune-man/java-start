@@ -10,5 +10,15 @@ public class While2_2 {
     System.out.println("i=" + i + " sum=" + sum);
     i++;
 
+    sum = sum + i;
+    System.out.println("i=" + i + " sum=" + sum);
+
+    sum = sum + i;
+    System.out.println("i=" + i + " sum=" + sum);
+
+
+
+    
+
   }
 }
