@@ -7,6 +7,7 @@ public class DoWhile1 {
     while (i < 3) {
       System.out.println("현재 숫자:" + i);
       i++;
+      // 출력 결과 없음
     }
   }
 
