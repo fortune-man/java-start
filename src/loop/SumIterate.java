@@ -12,16 +12,28 @@ public class SumIterate {
   public static void main(String[] args) {
     // 사용자가 max를 입력하면
     Scanner scanner = new Scanner(System.in);
-    int number = scanner.nextInt();
+    int max = scanner.nextInt();
     // 1부터 입력수 까지 누적합 출력
-    System.out.println(sum(number));
+
+    System.out.println("while문으로 합산 = " + sumUseWhileLoop(max));
+    System.out.println("for문으로 합산= " + sumUseForLoop(max));
   }
 
-  private static int sum(int number) {
-    int result = 1;
-    for (int i = 1; i <= number; i++) {
-      result += i;
+  private static int sumUseWhileLoop(int max) {
+    int i = 1;
+    int sum = 0;
+    while (i <= max) {
+      sum += i;
+      i++;
     }
-    return result;
+    return sum;
+  }
+
+  private static int sumUseForLoop(int max) {
+    int sum = 0;
+    for (int i = 1; i <= max; i++) {
+      sum += i;
+    }
+    return sum;
   }
 }
