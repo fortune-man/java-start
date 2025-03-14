@@ -15,8 +15,13 @@ public class Pyramid {
     Scanner scanner = new Scanner(System.in).useDelimiter("\n");
     int number = scanner.nextInt();
     System.out.println("rows =" + number);
-    for(int i = 1; i <= number; i++) {
-      System.out.print("*");
+    String addStars = "*";
+    String result = "\n";
+    for(int i = 0; i < number; i++) {
+      System.out.println(addStars);
+      addStars += addStars;
+      result += addStars;
+
     }
   }
 
