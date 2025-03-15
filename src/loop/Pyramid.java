@@ -13,16 +13,24 @@ public class Pyramid {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in).useDelimiter("\n");
-    int number = scanner.nextInt();
-    System.out.println("rows =" + number);
-    String addStars = "*";
-    String result = "\n";
-    for(int i = 0; i < number; i++) {
-      System.out.println(addStars);
-      addStars += addStars;
-      result += addStars;
+    int rows = scanner.nextInt();
+    // 1부터 입력수까지 i증감 반복
+    iterateNumbers(rows);
+  }
 
+  private static void iterateNumbers(int rows) {
+    for(int i = 1; i <= rows; i++) {
+      printStars(i);
     }
+  }
+
+  private static void printStars(int i) {
+    // 1부터 i이하까지 증감하는 변수 j만큼 "*" 출력을 반복
+    for(int j = 1; j <= i; j++) {
+      System.out.print("*");
+    }
+    // 왜 줄바꿈은 "\n"이 안되는지?
+    System.out.println();
   }
 
 }
