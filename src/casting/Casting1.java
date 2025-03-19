@@ -1,5 +1,6 @@
 package casting;
 
+// 자동 형변환
 public class Casting1 {
 
   // 작은 범위 -> 큰 범위 o. int, long, double
