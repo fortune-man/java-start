@@ -7,10 +7,15 @@ public class While2_3 {
   public static void main(String[] args) {
   // 입력 받아서 더하기 빼기 구현
     Scanner scanner = new Scanner(System.in);
-    int first = scanner.nextInt();
-    String operate = scanner.next();
-    int next = scanner.nextInt();
-    int result = 0;
+    int sum = 0;
+    int i = 1;
+    int endNum = 3;
+
+    while (i <= endNum) {
+      sum = sum + i;
+      System.out.println("i=" + i + " sum=" + sum);
+      i++;
+    }
 
     }
 }
