@@ -24,10 +24,9 @@ public class ScannerEx5 {
     int num2 = scanner.nextInt();
 
     System.out.println("첫번째 숫자를 입력하세요:");
-    int num1 = scanner.nextInt();
 
     System.out.println("두번째 숫자를 입력하세요:");
-    int num2 = scanner.nextInt();
+
 
     if (num1 > num2) {
       int temp = num1;
