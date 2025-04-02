@@ -12,6 +12,8 @@ public class Array1Ref1 {
     students[3] = 60;
     students[4] = 50;
 
+    System.out.println("학생1 점수:" );
+
     System.out.println("학");
   }
 
