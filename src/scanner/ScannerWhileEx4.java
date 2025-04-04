@@ -36,10 +36,7 @@ public class ScannerWhileEx4 {
       } else if (option == 3) {
         System.out.println("프로그램을 종료합니다.");
       }
-      }
+
     }
-
-
   }
-
 }
