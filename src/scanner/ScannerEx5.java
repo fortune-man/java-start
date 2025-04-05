@@ -33,4 +33,13 @@ public class ScannerEx5 {
       num2 = temp;
       num1 = num2;
     }
-    for (int i = num1
+    for (int i = num1; i <= num2; i++) {
+      System.out.println(i + ",");
+      if (i == num2) {
+        System.out.println(i);
+      }
+    }
+  }
+
+
+}
