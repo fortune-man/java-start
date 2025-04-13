@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 사용자로부터 4명 학생의 국어, 수학, 영어 점수를 입력받아 각 학생의 총점과 평균을 계산하는 프로그램을 작성하자.
  * 2차원 배열을 사용하고, 실행 결과 예시를 참고하자.
  */
-// 여기서도 재미를 느낄 수 없나?
+
 public class ArrayEx7 {
 
   public static void main(String[] args) {
@@ -29,6 +29,10 @@ public class ArrayEx7 {
         sum = language + english + math;
         average = sum / array[i].length;
         System.out.println(String.format("%d번 학생의 총점: %d, 평균 : %d", sum, average));
+        for(int k = 0; k < array.length; k++) {
+
+        }
+
       }
     }
 
