@@ -11,40 +11,32 @@ public class ArrayEx7 {
 
   public static void main(String[] args) {
     // 학생수 4. 과목수 3의 이차원 배열
+    System.out.println("학생수를 입력하세요:");
     Scanner scanner = new Scanner(System.in);
     int enter = scanner.nextInt();
 
-    int[][] array = new int[4][3];
-    int language = scanner.nextInt();
-    int english = scanner.nextInt();
-    int math = scanner.nextInt();
-    scanner.close();
+    int[][] array = new int[enter][3];
+    int language = 0;
+    int english = 0;
+    int math = 0;
 
     int sum = 0;
     double average = 0;
     for (int i = 1; i <=array.length; i++) {
-      int students = array[i].length;
+      int students = array[0].length;
       System.out.println(String.format("%d번 학생의 성적을 입력하세요.", i));
-      System.out.println(String.format("국어 점수: %d", language));
-      System.out.println(String.format("영어 점수: %d", english));
-      System.out.println(String.format("수학 점수: %d", math));
+      language = scanner.nextInt();
+      english = scanner.nextInt();
+      math = scanner.nextInt();
       for (int j = 0; j < array.length; j++) {
-
+        System.out.println(String.format("국어 점수: %d", language));
+        System.out.println(String.format("영어 점수: %d", english));
+        System.out.println(String.format("수학 점수: %d", math));
         sum = language + english + math;
         average = sum / students;
         System.out.println(String.format("%d번 학생의 총점: %d, 평균 : %f", i, sum, average));
-        continue;
       }
     }
-
-
-//
-//    // 총점과 평균 출력
-//    for (int i = 0; i < array.length; i++) {
-//
-//      System.out.println(String.format("%d번 학생의 총점: %d, 평균 : %d", sum, average));
-//    }
-
   }
 
 }
