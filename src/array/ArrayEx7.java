@@ -10,29 +10,28 @@ import java.util.Scanner;
 public class ArrayEx7 {
 
   public static void main(String[] args) {
-    // 인덱스 크기 4. 3의 이차원 배열
-    int[][] array = new int[4][3];
+    // 학생수 4. 과목수 3의 이차원 배열
     Scanner scanner = new Scanner(System.in);
-    String enter = scanner.nextLine();
+    int enter = scanner.nextInt();
+
+    int[][] array = new int[4][3];
     int language = scanner.nextInt();
     int english = scanner.nextInt();
     int math = scanner.nextInt();
     scanner.close();
+
     int sum = 0;
     double average = 0;
     for (int i = 0; i < array.length; i++) {
-      System.out.println(String.format("%d번 학생의 성적을 입력하세요.", array[i]));
+      int students = array[i].length;
+      System.out.println(String.format("%d번 학생의 성적을 입력하세요.", students));
       for (int j = 0; j < array.length; j++) {
         System.out.println(String.format("국어 점수: %d", language));
         System.out.println(String.format("영어 점수: %d", english));
         System.out.println(String.format("수학 점수: %d", math));
         sum = language + english + math;
-        average = sum / array[i].length;
-        System.out.println(String.format("%d번 학생의 총점: %d, 평균 : %d", sum, average));
-        for(int k = 0; k < array.length; k++) {
-
-        }
-
+        average = sum / students;
+        System.out.println(String.format("%d번 학생의 총점: %d, 평균 : %f", students, sum, average));
       }
     }
 
