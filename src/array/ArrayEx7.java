@@ -28,15 +28,19 @@ public class ArrayEx7 {
       language = scanner.nextInt();
       english = scanner.nextInt();
       math = scanner.nextInt();
-      for (int j = 0; j < array.length; j++) {
-        System.out.println(String.format("국어 점수: %d", language));
-        System.out.println(String.format("영어 점수: %d", english));
-        System.out.println(String.format("수학 점수: %d", math));
-        sum = language + english + math;
-        average = sum / students;
-        System.out.println(String.format("%d번 학생의 총점: %d, 평균 : %f", i, sum, average));
-      }
+      printScores(language, english, math, students, i);
     }
+  }
+
+  private static void printScores(int language, int english, int math, int students, int i) {
+    double average;
+    int sum;
+    System.out.println(String.format("국어 점수: %d", language));
+    System.out.println(String.format("영어 점수: %d", english));
+    System.out.println(String.format("수학 점수: %d", math));
+    sum = language + english + math;
+    average = sum / students;
+    System.out.println(String.format("%d번 학생의 총점: %d, 평균 : %f", i, sum, average));
   }
 
 }
