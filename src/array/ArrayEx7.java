@@ -22,16 +22,18 @@ public class ArrayEx7 {
 
     int sum = 0;
     double average = 0;
-    for (int i = 0; i < array.length; i++) {
+    for (int i = 1; i <=array.length; i++) {
       int students = array[i].length;
-      System.out.println(String.format("%d번 학생의 성적을 입력하세요.", students));
+      System.out.println(String.format("%d번 학생의 성적을 입력하세요.", i));
+      System.out.println(String.format("국어 점수: %d", language));
+      System.out.println(String.format("영어 점수: %d", english));
+      System.out.println(String.format("수학 점수: %d", math));
       for (int j = 0; j < array.length; j++) {
-        System.out.println(String.format("국어 점수: %d", language));
-        System.out.println(String.format("영어 점수: %d", english));
-        System.out.println(String.format("수학 점수: %d", math));
+
         sum = language + english + math;
         average = sum / students;
-        System.out.println(String.format("%d번 학생의 총점: %d, 평균 : %f", students, sum, average));
+        System.out.println(String.format("%d번 학생의 총점: %d, 평균 : %f", i, sum, average));
+        continue;
       }
     }
 
