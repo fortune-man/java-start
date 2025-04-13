@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class ArrayEx7 {
 
   private static final int SUBJECT = 3;
+  private static final int STUDENTS = 0;
   public static void main(String[] args) {
     // 학생수 4. 과목수 3의 이차원 배열
     System.out.println("학생수를 입력하세요:");
@@ -23,7 +24,7 @@ public class ArrayEx7 {
 
     int sum = 0;
     double average = 0;
-    int students = array[0].length;
+    int students = array[STUDENTS].length;
     for (int i = 1; i <=array.length; i++) {
       System.out.println(String.format("%d번 학생의 성적을 입력하세요.", i));
       language = scanner.nextInt();
