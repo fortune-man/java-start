@@ -35,7 +35,7 @@ public class ArrayEx7 {
       sum = language + english + math;
       average = sum / students;
     }
-    for (int j = 1; j <= students-1; j++) {
+    for (int j = 1; j <= students; j++) {
       System.out.println(String.format("%d번 학생의 총점: %d, 평균 : %f", j, sum, average));
     }
   }
