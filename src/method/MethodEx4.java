@@ -5,58 +5,60 @@ import java.util.Scanner;
 public class MethodEx4 {
 
   public static void main(String[] args) {
-
+    int[] table = new int[1];
+    int balance = table[0];
+    int withdraw = 0;
+    int deposit = 0;
+    String message;
     Scanner scanner = new Scanner(System.in);
-    int[] database = new int[1];
-    int balance = database[0];
+    int choose = getChoose(scanner);
 
-    while (true) {
-      String boarderline = "--------------------------------- \n";
-      String ui = "1.입금 | 2.출금 | 3.잔액 확인 | 4.종료\n";
-      System.out.println(boarderline + ui + boarderline);
-      System.out.println("선택: ");
-      int choose = scanner.nextInt();
+    switch(choose) {
+      case 1:
+        System.out.println("입금액을 입력하세요: \n");
 
-      if (choose == 1) {
-        System.out.println("입금액을 입력하세요:");
-        balance += scanner.nextInt();
-        String message = String.format("%d원을 입금하였습니다. 현재 잔액: %d원", balance, balance);
+        deposit = scanner.nextInt();
+        message = String.format("%d원을 입금하였습니다. 현재 잔액: %d원", deposit, setDeposit(balance, choose));
+
         System.out.println(message);
-        continue;
-      }
-
-      if (choose == 2) {
-        System.out.println("출금액을 입력하세요:");
-        int withDrawl = scanner.nextInt();
-        balance -= withDrawl;
-        if (edgeCase(balance, withDrawl)) {
-          continue;
-        }
-
-        String message = String.format("%d원을 출금하였습니다. 현재 잔액: %d원", balance, balance);
+      case 2:
+        message = String.format("%d원을 출금하였습니다. 현재 잔액: %d원", withdraw, balance);
         System.out.println(message);
-        continue;
-      }
-
-      // 잔액 변경 갱신 안되는 문제
-      if (choose == 3) {
-        System.out.println(String.format("현재 잔액: %d원", balance));
-        continue;
-      }
-
-      if (choose == 4) {
-        System.out.println("시스템을 종료합니다.");
-        break;
-      }
+      case 3:
+        message = String.format("현재 잔액: %d원", balance);
+        System.out.println(message);
+      case 4:
+        message = "시스템을 종료합니다.";
+        System.out.println(message);
+      case 5:
+        message = String.format("%d원을 출금하려 했으나 잔액이 부족합니다.", balance);
+        System.out.println(message);
     }
+
   }
 
-  private static boolean edgeCase(int balance, int withDrawl) {
-    if (balance < 0) {
-      System.out.println(String.format("%d원을 출금하려 했으나 잔액이 부족합니다.", withDrawl));
-      return true;
+  // 현재 잔액보다 출금액이 크면 오류
+  private static int setWidthDraw(int balance, int widthDraw) {
+    if( widthDraw > balance ) {
+      message = String.format("%d원을 출금하려 했으나 잔액이 부족합니다.", balance);
     }
-    return false;
+
   }
+
+  // 입금하면 상태변경
+  private static int setDeposit(int balance, int choose) {
+    balance += choose;
+    return balance;
+  }
+  private static int getChoose(Scanner scanner) {
+    String line = "---------------------------------\n";
+    String ui = "1.입금 | 2.출금 | 3.잔액 확인 | 4.종료\n";
+
+    System.out.println(line + ui + line + "선택:");
+
+    int choose = scanner.nextInt();
+    return choose;
+  }
+
 
 }
