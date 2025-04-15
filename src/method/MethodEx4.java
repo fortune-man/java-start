@@ -28,15 +28,17 @@ public class MethodEx4 {
       if (choose == 2) {
         System.out.println("출금액을 입력하세요:");
         int withDrawl = scanner.nextInt();
-        int state = balance - withDrawl;
         balance -= withDrawl;
-        String message = String.format("%d원을 출금하였습니다. 현재 잔액: %d원", withDrawl, state);
+        if (edgeCase(balance, withDrawl)) {
+          continue;
+        }
+
+        String message = String.format("%d원을 출금하였습니다. 현재 잔액: %d원", balance, balance);
         System.out.println(message);
         continue;
       }
 
       // 잔액 변경 갱신 안되는 문제
-
       if (choose == 3) {
         System.out.println(String.format("현재 잔액: %d원", balance));
         continue;
@@ -47,6 +49,14 @@ public class MethodEx4 {
         break;
       }
     }
+  }
+
+  private static boolean edgeCase(int balance, int withDrawl) {
+    if (balance < 0) {
+      System.out.println(String.format("%d원을 출금하려 했으나 잔액이 부족합니다.", withDrawl));
+      return true;
+    }
+    return false;
   }
 
 }
