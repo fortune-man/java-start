@@ -12,6 +12,7 @@ public class Overloading3 {
     return a + b;
   }
 
+  // 이름 ==. 매개변수 유형 !=
   private static double add(double a, double b) {
     System.out.println("2번 호출");
     return a + b;
