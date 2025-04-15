@@ -11,6 +11,7 @@ public class ArrayEx7 {
 
   private static final int SUBJECT = 3;
   private static final int STUDENTS = 0;
+
   public static void main(String[] args) {
     // 학생수 4. 과목수 3의 이차원 배열
     System.out.println("학생수를 입력하세요:");
@@ -25,7 +26,7 @@ public class ArrayEx7 {
     int sum = 0;
     double average = 0;
     int students = array[STUDENTS].length;
-    for (int i = 1; i <=array.length; i++) {
+    for (int i = 1; i <= array.length; i++) {
       System.out.println(String.format("%d번 학생의 성적을 입력하세요.", i));
       language = scanner.nextInt();
       english = scanner.nextInt();
@@ -35,7 +36,7 @@ public class ArrayEx7 {
       sum = language + english + math;
       average = sum / students;
     }
-    for (int j = 1; j <= students; j++) {
+    for (int j = 1; j <= students - 1; j++) {
       System.out.println(String.format("%d번 학생의 총점: %d, 평균 : %f", j, sum, average));
     }
   }
@@ -48,5 +49,4 @@ public class ArrayEx7 {
     System.out.println(String.format("수학 점수: %d", math));
 
   }
-
 }
