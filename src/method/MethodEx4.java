@@ -9,7 +9,8 @@ public class MethodEx4 {
     int balance = table[0];
     int withdraw = 0;
     int deposit = 0;
-    String message;
+
+    String message = "";
     Scanner scanner = new Scanner(System.in);
     int choose = getChoose(scanner);
 
@@ -21,7 +22,9 @@ public class MethodEx4 {
         message = String.format("%d원을 입금하였습니다. 현재 잔액: %d원", deposit, setDeposit(balance, choose));
 
         System.out.println(message);
+        
       case 2:
+        setWidthDraw(balance, withdraw, message);
         message = String.format("%d원을 출금하였습니다. 현재 잔액: %d원", withdraw, balance);
         System.out.println(message);
       case 3:
@@ -38,10 +41,13 @@ public class MethodEx4 {
   }
 
   // 현재 잔액보다 출금액이 크면 오류
-  private static int setWidthDraw(int balance, int widthDraw) {
-    if( widthDraw > balance ) {
-      message = String.format("%d원을 출금하려 했으나 잔액이 부족합니다.", balance);
+  private static void setWidthDraw(int balance, int widthDraw, String message) {
+    if( widthDraw < balance ) {
+      message = String.format("%d원을 출금하였습니다.현재 잔액: %d원", widthDraw, balance);
+      System.out.println(message);
     }
+    message = String.format("%d원을 출금하려 했으나 잔액이 부족합니다.", widthDraw);
+    System.out.println(message);
 
   }
 
@@ -50,6 +56,7 @@ public class MethodEx4 {
     balance += choose;
     return balance;
   }
+
   private static int getChoose(Scanner scanner) {
     String line = "---------------------------------\n";
     String ui = "1.입금 | 2.출금 | 3.잔액 확인 | 4.종료\n";
@@ -58,7 +65,6 @@ public class MethodEx4 {
 
     int choose = scanner.nextInt();
     return choose;
+
   }
-
-
 }
