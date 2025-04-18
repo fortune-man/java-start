@@ -11,7 +11,7 @@ public class OperatorAdd2 {
 
     a = 1;
     b = 0;
-    b = a++;
+    b = a--;
     System.out.println(a + b);
   }
 
